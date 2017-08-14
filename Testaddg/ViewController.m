@@ -39,7 +39,6 @@
         star.name = name;
         [_dataArray addObject:star];
     }
-    
     self.searchArray = [NSMutableArray arrayWithArray:_dataArray];
     self.tabelV = [[UITableView alloc] initWithFrame:CGRectMake(0, 90, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 90) style:UITableViewStylePlain];
     _tabelV.dataSource = self;
