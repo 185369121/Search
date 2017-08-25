@@ -52,7 +52,18 @@
         return NSMakeRange(0, 0);
     }
 
-    
+ 
+    if (searchType & LYSearchWithChineseInitials && [searchString containChinese] == NO) {
+        NSString *searchPy = [searchString pinyinString];
+        NSString *firstCharString = [self firstCharsString];
+        if (firstCharString == nil) {
+            return NSMakeRange(0, 0);
+        }
+        NSRange range = [firstCharString rangeOfString:searchPy];
+        if (range.length) {
+            return range;
+        }
+    }
     
     if (searchType & LYSearchWithChinesePinyin) {
         NSString *searchPy = [searchString pinyinString];
@@ -91,20 +102,6 @@
                     break;
                 }
             }
-            
-            if (returnrange.length == 0) {
-                if (searchType & LYSearchWithChineseInitials && [searchString containChinese] == NO) {
-                    NSString *searchPy = [searchString pinyinString];
-                    NSString *firstCharString = [self firstCharsString];
-                    if (firstCharString == nil) {
-                        return NSMakeRange(0, 0);
-                    }
-                    NSRange range = [firstCharString rangeOfString:searchPy];
-                    return range;
-                }
-            }
-
-            
             return returnrange;
         }else{
             if (searchType & LYSearchWithChineseInitials) {
@@ -116,17 +113,6 @@
                 return range;
 
             }
-        }
-    }else{
-        if (searchType & LYSearchWithChineseInitials && [searchString containChinese] == NO) {
-            NSString *searchPy = [searchString pinyinString];
-            NSString *firstCharString = [self firstCharsString];
-            if (firstCharString == nil) {
-                return NSMakeRange(0, 0);
-            }
-            NSRange range = [firstCharString rangeOfString:searchPy];
-            return range;
-            
         }
     }
     return NSMakeRange(0, 0);
