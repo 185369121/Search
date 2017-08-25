@@ -91,6 +91,20 @@
                     break;
                 }
             }
+            
+            if (returnrange.length == 0) {
+                if (searchType & LYSearchWithChineseInitials && [searchString containChinese] == NO) {
+                    NSString *searchPy = [searchString pinyinString];
+                    NSString *firstCharString = [self firstCharsString];
+                    if (firstCharString == nil) {
+                        return NSMakeRange(0, 0);
+                    }
+                    NSRange range = [firstCharString rangeOfString:searchPy];
+                    return range;
+                }
+            }
+
+            
             return returnrange;
         }else{
             if (searchType & LYSearchWithChineseInitials) {
