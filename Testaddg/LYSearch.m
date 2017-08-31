@@ -7,7 +7,6 @@
 //
 
 #import "LYSearch.h"
-#import "NSString+LYSearch.h"
 #import "NSObject+Addition.h"
 #import "NSObject+Search.h"
 @interface LYSearch()
@@ -22,6 +21,7 @@
     if (self = [super init]) {
         group = dispatch_group_create();
         self.searchArray = [NSMutableArray array];
+        self.searchType = LYSearchWithChineseExact  | LYSearchWithChineseInitials | LYSearchWithChineseChineseAndPinyin | LYSearchWithChinesePinyin;
     }
     return self;
 }
@@ -40,7 +40,7 @@
             if ([tagStr isEqualToString:searchText]) {
                 for (NSString *property in propertys) {
                     NSString *proValue = [star valueForKey:property];
-                    NSString *searchStr = [proValue stringOfSearchString:searchText andChineseMatchType: LYSearchWithChineseExact  | LYSearchWithChineseInitials | LYSearchWithChineseChineseAndPinyin | LYSearchWithChinesePinyin];
+                    NSString *searchStr = [proValue stringOfSearchString:searchText andChineseMatchType: self.searchType];
                     
                     if (searchStr.isNoEmpty) {
                         [array addObject:star];

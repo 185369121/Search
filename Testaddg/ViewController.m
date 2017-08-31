@@ -50,6 +50,7 @@
     _tabelV.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     [self.view addSubview:_tabelV];
     self.search = [[LYSearch alloc] init];
+    self.search.searchType = LYSearchWithChineseInitials;
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
