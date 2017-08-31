@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F23B9DA1F57DD9700F4B511 /* LYSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F23B9D91F57DD9700F4B511 /* LYSearch.m */; };
+		5F23B9DD1F57EC1A00F4B511 /* NSObject+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F23B9DC1F57EC1A00F4B511 /* NSObject+Search.m */; };
 		5FE306B11F3D5C4D009A6AA4 /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE306A51F3D5C4D009A6AA4 /* ChineseToPinyinResource.m */; };
 		5FE306B21F3D5C4D009A6AA4 /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE306A71F3D5C4D009A6AA4 /* HanyuPinyinOutputFormat.m */; };
 		5FE306B31F3D5C4D009A6AA4 /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE306A91F3D5C4D009A6AA4 /* NSString+PinYin4Cocoa.m */; };
@@ -46,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F23B9D81F57DD9700F4B511 /* LYSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSearch.h; sourceTree = "<group>"; };
+		5F23B9D91F57DD9700F4B511 /* LYSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSearch.m; sourceTree = "<group>"; };
+		5F23B9DB1F57EC1A00F4B511 /* NSObject+Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Search.h"; sourceTree = "<group>"; };
+		5F23B9DC1F57EC1A00F4B511 /* NSObject+Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Search.m"; sourceTree = "<group>"; };
 		5FE306A41F3D5C4D009A6AA4 /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
 		5FE306A51F3D5C4D009A6AA4 /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
 		5FE306A61F3D5C4D009A6AA4 /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
@@ -176,6 +182,10 @@
 				5FE306A21F3D5C4D009A6AA4 /* PinYin4Objc */,
 				5FE5DFCF1F3AFF77006A5ED5 /* Star.h */,
 				5FE5DFD01F3AFF77006A5ED5 /* Star.m */,
+				5F23B9D81F57DD9700F4B511 /* LYSearch.h */,
+				5F23B9D91F57DD9700F4B511 /* LYSearch.m */,
+				5F23B9DB1F57EC1A00F4B511 /* NSObject+Search.h */,
+				5F23B9DC1F57EC1A00F4B511 /* NSObject+Search.m */,
 				5FE5DFCC1F3ACACA006A5ED5 /* NSString+LYSearch.h */,
 				5FE5DFCD1F3ACACA006A5ED5 /* NSString+LYSearch.m */,
 				5FE5DFC01F3AC97B006A5ED5 /* NSObject+Addition.h */,
@@ -363,9 +373,11 @@
 				5FE5DFCA1F3AC97B006A5ED5 /* NSMutableAttributedString+Addtion.m in Sources */,
 				5FE306B41F3D5C4D009A6AA4 /* PinyinFormatter.m in Sources */,
 				5FE306B21F3D5C4D009A6AA4 /* HanyuPinyinOutputFormat.m in Sources */,
+				5F23B9DD1F57EC1A00F4B511 /* NSObject+Search.m in Sources */,
 				5FE5DF921F3AC0EA006A5ED5 /* AppDelegate.m in Sources */,
 				5FE5DFCE1F3ACACA006A5ED5 /* NSString+LYSearch.m in Sources */,
 				5FE5DF8F1F3AC0E9006A5ED5 /* main.m in Sources */,
+				5F23B9DA1F57DD9700F4B511 /* LYSearch.m in Sources */,
 				5FE306B51F3D5C4D009A6AA4 /* PinyinHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
