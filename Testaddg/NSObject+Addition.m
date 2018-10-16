@@ -9,12 +9,12 @@
 #import "NSObject+Addition.h"
 
 @implementation NSObject (Addition)
--(BOOL)isValid{
+
+- (BOOL)isValid {
     return !(self == nil || [self isKindOfClass:[NSNull class]]);
 }
 
-- (BOOL)isNoEmpty
-{
+- (BOOL)isNoEmpty {
     if ([self isKindOfClass:[NSNull class]] || self == nil)
     {
         return NO;

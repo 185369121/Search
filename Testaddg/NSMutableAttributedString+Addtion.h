@@ -16,19 +16,19 @@
 
 
 @interface NSMutableAttributedString (Addtion)
--(NSMutableAttributedString *)addAttributesWithArray:(NSArray *)attrs;//数组 name value range
--(NSMutableAttributedString *)addAttributesWithDict:(NSDictionary *)attrs range:(NSRange)range;
--(NSMutableAttributedString *)addAttributesWithDict:(NSDictionary *)dict;
+- (NSMutableAttributedString *)addAttributesWithArray:(NSArray *)attrs;//数组 name value range
+- (NSMutableAttributedString *)addAttributesWithDict:(NSDictionary *)attrs range:(NSRange)range;
+- (NSMutableAttributedString *)addAttributesWithDict:(NSDictionary *)dict;
 
--(void)setTextColor:(UIColor *)color range:(NSRange)range;
--(void)setTextFont:(UIFont *)font range:(NSRange)range;
+- (void)setTextColor:(UIColor *)color range:(NSRange)range;
+- (void)setTextFont:(UIFont *)font range:(NSRange)range;
 
--(void)setDesignatedText:(NSString *)text color:(UIColor *)color;
--(void)setDesignatedText:(NSString *)text font:(UIFont *)font;
+- (void)setDesignatedText:(NSString *)text color:(UIColor *)color;
+- (void)setDesignatedText:(NSString *)text font:(UIFont *)font;
 
--(void)setDesignatedTexts:(NSArray *)array color:(UIColor *)color;
--(void)setDesignatedTexts:(NSArray *)array font:(UIFont *)font;
+- (void)setDesignatedTexts:(NSArray *)array color:(UIColor *)color;
+- (void)setDesignatedTexts:(NSArray *)array font:(UIFont *)font;
 
--(void)setDesignatedText:(NSString *)text attribute:(NSString *)name value:(id)value;
--(void)setDesignatedTexts:(NSArray *)texts attribute:(NSString *)name value:(id)value;
+- (void)setDesignatedText:(NSString *)text attribute:(NSString *)name value:(id)value;
+- (void)setDesignatedTexts:(NSArray *)texts attribute:(NSString *)name value:(id)value;
 @end

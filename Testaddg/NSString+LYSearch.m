@@ -10,7 +10,8 @@
 #import "PinYin4Objc.h"
 
 @implementation NSString (LYSearch)
--(NSRange)rangeOfSearchString:(NSString *)searchString andChineseMatchType:(LYSearchType)searchType{
+
+- (NSRange)rangeOfSearchString:(NSString *)searchString andChineseMatchType:(LYSearchType)searchType {
     if (self == nil || searchString == nil) {
         return NSMakeRange(0, 0);
     }
@@ -117,7 +118,8 @@
     }
     return NSMakeRange(0, 0);
 }
--(NSString *)stringOfSearchString:(NSString *)searchString andChineseMatchType:(LYSearchType)searchType{
+
+- (NSString *)stringOfSearchString:(NSString *)searchString andChineseMatchType:(LYSearchType)searchType {
     NSRange range = [self rangeOfSearchString:searchString andChineseMatchType:searchType];
     if (range.length) {
         return [self substringWithRange:range];
@@ -125,7 +127,7 @@
     return nil;
 }
 
--(NSString *)pinyinString{
+- (NSString *)pinyinString {
     if (self && self.length) {
         HanyuPinyinOutputFormat *outputFormat=[[HanyuPinyinOutputFormat alloc] init];
         [outputFormat setToneType:ToneTypeWithoutTone];
@@ -149,7 +151,7 @@
     }
 }
 
--(NSString *)firstCharsString{
+- (NSString *)firstCharsString {
     if (self) {
         NSMutableString *string = [NSMutableString string];
         for (int i = 0; i < self.length; i ++) {
@@ -163,8 +165,8 @@
     }
     return nil;
 }
-- (BOOL)containChinese
-{
+
+- (BOOL)containChinese {
     for(int i = 0; i < [self length];i ++)
     {
         int a =[self characterAtIndex:i];
@@ -175,11 +177,11 @@
     return NO;
 }
 
-- (BOOL)isChinese
-{
+- (BOOL)isChinese {
     NSString *match = @"(^[\u4e00-\u9fa5]+$)";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
     return [predicate evaluateWithObject:self];
 }
+
 
 @end

@@ -12,4 +12,5 @@
 
 -(BOOL)isValid;
 -(BOOL)isNoEmpty;//用这个
+
 @end

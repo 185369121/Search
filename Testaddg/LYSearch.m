@@ -9,15 +9,18 @@
 #import "LYSearch.h"
 #import "NSObject+Addition.h"
 #import "NSObject+Search.h"
+
 @interface LYSearch()
+
 @property(nonatomic,strong) NSMutableArray *searchArray;
 @property(nonatomic,assign) BOOL search;
+
 @end
 
 @implementation LYSearch{
     dispatch_group_t group;
 }
--(instancetype)init{
+- (instancetype)init {
     if (self = [super init]) {
         group = dispatch_group_create();
         self.searchArray = [NSMutableArray array];
@@ -25,7 +28,8 @@
     }
     return self;
 }
--(void)searchWithSearchString:(NSString *)searchText andModeDataArray:(NSArray *)modeArray andSearchPropertys:(NSArray *)propertys complete:(void (^)(NSMutableArray *, BOOL))success sort:(BOOL (^)(id, id))sort{
+
+- (void)searchWithSearchString:(NSString *)searchText andModeDataArray:(NSArray *)modeArray andSearchPropertys:(NSArray *)propertys complete:(void (^)(NSMutableArray *, BOOL))success sort:(BOOL (^)(id, id))sort {
     _search = YES;
     @synchronized (_searchArray) {
         [_searchArray removeAllObjects];
@@ -82,8 +86,8 @@
             success(_searchArray,_search);
         }
     });
-    
 }
+
 @end
 
 

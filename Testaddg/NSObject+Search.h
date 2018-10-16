@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (Search)
+
 @property (nonatomic, copy) NSString *searchString_ly;
 @property(nonatomic,assign) NSRange searchStringRange_ly;
+
 @end

@@ -17,10 +17,12 @@ typedef NS_ENUM(NSUInteger, LYSearchType) {
 
 
 @interface NSString (LYSearch)
+
 - (NSRange)rangeOfSearchString:(NSString *)searchString andChineseMatchType:(LYSearchType)searchType;
 - (NSString *)stringOfSearchString:(NSString *)searchString andChineseMatchType:(LYSearchType)searchType;;
 - (NSString *)pinyinString;
 - (NSString *)firstCharsString;
 - (BOOL)containChinese;
 - (BOOL)isChinese;
+
 @end

@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface Star : NSObject
+
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *searchStr;
 @property (nonatomic, copy) NSString *phone;
+
 @end
